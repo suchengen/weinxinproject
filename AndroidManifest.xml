@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shane.weixin"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+           
+            android:name="com.shane.weixin.LogoActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.shane.weixin.MainActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity 
+            android:name="com.shane.weixin.MyInfoActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity 
+            android:name="com.shane.weixin.SetMyNameActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity 
+            android:name="com.shane.weixin.SetMyCountActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity 
+            android:name="com.shane.weixin.SetMyMarkActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.shane.activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity 
+            android:name="com.shane.activity.ScanResultActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity 
+            android:name="com.shane.weixin.SetMySignActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        
+        <activity
+            android:name="com.shane.cityselect.provinceList"/>
+        <activity
+            android:name="com.shane.cityselect.cityList"/>
+        <activity 
+            android:name="com.shane.weixin.TalkViewActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity 
+            android:name="com.shane.weixin.FriendsActivity" 
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity 
+            android:name="com.shane.weixin.ShakeActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity 
+            android:name="com.shane.weixin.NearFriendActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+    </application>
+
+</manifest>

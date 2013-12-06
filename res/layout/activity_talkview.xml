@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/talkviewtitle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/webviewtab_bg">
+
+        <Button 
+            android:id="@+id/exit_talkview"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="返回"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="#00000000"
+            />
+
+        <TextView
+            android:id="@+id/friendname_talkview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="NULL"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+		
+        <Button 
+            android:id="@+id/personinfo_talkview"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="个人资料"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="#00000000"
+            />
+    </RelativeLayout>
+    
+    <ScrollView
+	    android:id="@+id/talkscroll"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@id/talkviewtitle"
+	    android:paddingBottom="55dp"
+	    android:focusableInTouchMode="true">
+        
+	    <LinearLayout 
+	       	android:id="@+id/box_talkview"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+			android:scrollbars="horizontal" 
+	        android:orientation="vertical">
+
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="right"
+	            android:layout_marginTop="5dp"
+	            android:orientation="horizontal"
+	            android:layout_marginRight="10dp">
+
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/chatto_bg_sendding"
+	                android:text="FFFFFFFFFFFFFFF"
+	                android:textSize="20sp" />
+
+	            <ImageView
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:src="@drawable/image" />
+	        </LinearLayout>
+
+    	</LinearLayout>
+    </ScrollView>
+	
+    
+    <RelativeLayout
+        android:id="@+id/talkwrite"
+        android:layout_height="55dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mmfooter_bg_gray">
+        
+        <ImageButton
+            android:id="@+id/voice" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/chatting_setmode_voice_btn_normal"
+            android:background="#00000000"/>
+        <ImageButton 
+            android:id="@+id/add"
+            android:layout_toRightOf="@id/voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/type_select_btn_nor"
+            android:background="#00000000"/>
+        <Button
+            android:id="@+id/send_talkview"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:text="发送"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="#00000000"/>
+        <EditText
+            android:id="@+id/editmessage_talkview"
+            android:layout_toRightOf="@id/add"
+            android:layout_toLeftOf="@id/send_talkview"
+        	android:layout_width="match_parent"
+        	android:layout_height="45dp"
+        	android:layout_centerVertical="true"
+        	android:background="@drawable/chat_edit_normal"/>
+    </RelativeLayout>
+</RelativeLayout>
